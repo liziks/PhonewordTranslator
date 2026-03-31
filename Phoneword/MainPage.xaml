@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Phoneword.MainPage"
+             BackgroundColor="White">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="20" Padding="30">
+
+            <Label Text="Phoneword Translator"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="DarkBlue" />
+
+            <Label Text="Введите слово для перевода:"
+                   FontSize="16" />
+
+            <Entry x:Name="PhoneNumberEntry"
+                   Placeholder="например: MAUI"
+                   FontSize="18" />
+
+            <Button Text="Перевести"
+                    Clicked="OnTranslateClicked"
+                    BackgroundColor="DarkBlue"
+                    TextColor="White"
+                    HorizontalOptions="Fill" />
+
+            <Label x:Name="TranslatedLabel"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="DarkGreen" />
+
+            <Button Text="📞 Позвонить"
+                    Clicked="OnCallClicked"
+                    BackgroundColor="Green"
+                    TextColor="White"
+                    HorizontalOptions="Fill"
+                    IsEnabled="False"
+                    x:Name="CallButton" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
